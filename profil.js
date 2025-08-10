@@ -1,7 +1,11 @@
 // profil.js
 const user = localStorage.getItem('userAktif');
 if (!user) {
-  location.href = 'login.html';
+  document.getElementById('belumLogin').style.display = 'block';
+} else {
+  document.getElementById('profilMain').style.display = 'block';
+  // render konten profil
+}
 } else {
   const akun = JSON.parse(localStorage.getItem(user));
   document.getElementById('profilMain').innerHTML = `
