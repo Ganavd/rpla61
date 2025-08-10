@@ -1,12 +1,12 @@
-const user = localStorage.getItem('userAktif');
-if (!user) location.href = 'login.html';
-
+// galeri.js
 const galeri = JSON.parse(localStorage.getItem('galeri')) || [];
-
+const user = localStorage.getItem('userAktif');
 renderGaleri();
 
 document.getElementById('formGaleri').addEventListener('submit', e => {
   e.preventDefault();
+  if (!user) { alert('Silakan login untuk upload foto'); return; }
+
   const file = e.target[0].files[0];
   const caption = e.target[1].value;
   if (!file || !caption) return;
@@ -24,9 +24,12 @@ document.getElementById('formGaleri').addEventListener('submit', e => {
 function renderGaleri() {
   const html = galeri.map(g => `
     <div class="item">
-      <img src="${g.src}" alt="${g.caption}" />
+      <img src="${g.src}" alt="${g.caption}">
       <p>${g.caption} – <small>${g.user}</small></p>
     </div>
   `).join('');
   document.getElementById('gridGaleri').innerHTML = html;
+
+  // tampilkan / sembunyikan form upload
+  document.getElementById('formGaleri').style.display = user ? 'block' : 'none';
 }
