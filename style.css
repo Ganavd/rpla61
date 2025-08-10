@@ -1,3 +1,97 @@
+/* Google Font + warna tema */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --primary: #0077b6;
+  --secondary: #00b4d8;
+  --accent: #90e0ef;
+  --bg: #f8f9fa;
+  --text: #212529;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Header & Nav */
+header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+nav a, nav button {
+  color: #fff;
+  margin: 0 .5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: .2s;
+}
+nav a:hover, nav button:hover {
+  opacity: .8;
+}
+
+/* Card & Grid */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+.item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+.item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.item p {
+  padding: .75rem;
+  font-size: .9rem;
+}
+
+/* Tombol */
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: .6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .2s;
+}
+.btn:hover { background: var(--secondary); }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--primary);
+  color: #fff;
+}
+
+
+
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family:Arial, sans-serif; line-height:1.6; background:#f4f4f4; color:#333; }
 header { background:#0077b6; color:#fff; padding:1rem 2rem; }
