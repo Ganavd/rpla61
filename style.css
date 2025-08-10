@@ -171,6 +171,76 @@ footer { margin-top: auto; } /* pasti di dasar */
   z-index: 1000;
 }
 
+/* Latar full-screen animasi */
+.auth-body {
+  background: linear-gradient(-45deg, #6c5ce7, #00cec9, #e84393, #ff7675);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+@keyframes gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Card glass + slide-up */
+.auth-card {
+  background: rgba(255,255,255,.15);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  box-shadow: 0 25px 50px rgba(0,0,0,.25);
+  padding: 3rem 4rem;
+  width: 100%;
+  max-width: 420px;
+  color: #fff;
+  animation: slideUp .7s ease-out;
+}
+@keyframes slideUp {
+  from {opacity: 0; transform: translateY(40px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.auth-form input,
+.auth-form textarea {
+  width: 100%;
+  margin: .6rem 0;
+  padding: .9rem 1.1rem;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255,255,255,.2);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+.auth-btn {
+  width: 100%;
+  padding: .9rem;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255,255,255,.25);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+.auth-btn:hover {
+  background: rgba(255,255,255,.35);
+  transform: translateY(-2px);
+}
+.auth-link {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: .3s;
+}
+.auth-link:hover {
+  border-bottom-color: #fff;
+}
 
 footer {
   text-align: center;

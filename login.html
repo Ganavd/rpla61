@@ -2,28 +2,22 @@
 <html lang="id">
 <head>
   <meta charset="utf-8"/>
-  <title>Login – RPLA_61 Studio</title>
+  <title>Login – RPLA 61 Studio</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <h1>RPLA_61 Studio</h1>
-    <nav id="mainNav"></nav>
-  </header>
-
-  <main class="center">
-    <div class="glass-card">
-      <h2>Masuk Akun</h2>
-      <form id="formLogin">
+<body class="auth-body">
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <h2>Masuk ke Akun</h2>
+      <form id="formLogin" class="auth-form">
         <input type="text" placeholder="Username" name="user" required>
         <input type="password" placeholder="Password" name="pass" required>
-        <button type="submit" class="btn">Masuk</button>
+        <button type="submit" class="auth-btn">Masuk</button>
       </form>
-      <p>Belum punya akun? <a href="register.html">Daftar di sini</a></p>
+      <p>Belum punya akun? <a href="register.html" class="auth-link">Daftar dulu</a></p>
     </div>
-  </main>
+  </div>
 
-  <footer>...</footer>
   <script src="nav.js"></script>
   <script src="login.js"></script>
 </body>

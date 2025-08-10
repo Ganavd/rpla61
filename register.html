@@ -15,16 +15,19 @@
 </header>
 
 <main class="center">
- <div class="glass-card">
-  <h2>Buat Akun Baru</h2>
-  <form id="formReg">
-    <input type="text" placeholder="Username" name="user" required>
-    <input type="password" placeholder="Password" name="pass" required>
-    <input type="text" placeholder="Kode Absen (NAMA-ABSEN)" name="kode" required>
-    <input type="url" placeholder="URL Foto" name="foto">
-    <textarea placeholder="Bio singkat" name="bio" rows="2"></textarea>
-    <button type="submit" class="btn">Daftar</button>
-  </form>
+<div class="auth-wrapper">
+  <div class="auth-card">
+    <h2>Buat Akun Baru</h2>
+    <form id="formReg" class="auth-form">
+      <input type="text" placeholder="Username" name="user" required>
+      <input type="password" placeholder="Password" name="pass" required>
+      <input type="text" placeholder="Kode Absen" name="kode" required>
+      <input type="url" placeholder="URL Foto" name="foto">
+      <textarea placeholder="Bio singkat" name="bio" rows="2"></textarea>
+      <button type="submit" class="auth-btn">Daftar</button>
+    </form>
+    <p>Sudah punya akun? <a href="login.html" class="auth-link">Masuk</a></p>
+  </div>
 </div>
 </main>
 
