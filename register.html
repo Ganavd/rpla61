@@ -9,15 +9,17 @@
   <h1>RPLA 61 Studio</h1>
   <nav id="mainNav"></nav>
 
+<div class="glass-card">
   <h2>Buat Akun Baru</h2>
   <form id="formReg">
-    <label>Username: <input type="text" name="user" required></label><br>
-    <label>Password: <input type="password" name="pass" required></label><br>
-    <label>Kode Absen: <input type="text" name="kode" placeholder="NAMA-ABSEN" required></label><br>
-    <label>Foto (URL): <input type="url" name="foto" placeholder="https://i.imgur.com/xyz.png"></label><br>
-    <label>Bio: <textarea name="bio" rows="3" placeholder="Tulis bio singkat..."></textarea></label><br>
-    <button type="submit">Daftar</button>
+    <input type="text" placeholder="Username" name="user" required>
+    <input type="password" placeholder="Password" name="pass" required>
+    <input type="text" placeholder="Kode Absen (NAMA-ABSEN)" name="kode" required>
+    <input type="url" placeholder="URL Foto" name="foto">
+    <textarea placeholder="Bio singkat" name="bio" rows="2"></textarea>
+    <button type="submit" class="btn">Daftar</button>
   </form>
+</div>
 
   <script src="whitelist.js"></script>
   <script src="register.js"></script>

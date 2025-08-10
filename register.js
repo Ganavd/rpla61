@@ -1,21 +1,10 @@
-// register.js
 document.getElementById('formReg').addEventListener('submit', e => {
   e.preventDefault();
   const data = Object.fromEntries(new FormData(e.target));
   const kode = data.kode.toUpperCase();
-
-  // cek whitelist
-  if (!cekKode(kode)) {
-    alert('Kode tidak valid atau sudah dipakai');
-    return;
-  }
-
-  // tandai kode sudah dipakai
+  if (!cekKode(kode)) { showToast('Kode tidak valid / sudah dipakai'); return; }
   tandaiKode(kode);
-
-  // simpan data user
   localStorage.setItem(data.user, JSON.stringify(data));
-
-  alert('Akun berhasil dibuat! Silakan login.');
-  location.href = 'login.html';
+  showToast('Akun berhasil dibuat!'); 
+  setTimeout(()=> location.href='login.html', 1000);
 });

@@ -3,27 +3,28 @@
 <head>
   <meta charset="utf-8"/>
   <title>Login – RPLA_61 Studio</title>
-  <link rel="stylesheet" href="style.css"/>
-
-<h1>RPLA_61 Studio</h1>
-  <nav>
-    <a href="index.html">Beranda</a>
-    <a href="login.html">Masuk/Daftar</a>
-    <a href="profil.html">Profil</a>
-    <a href="tugas.html">Tugas</a>
-    <a href="galeri.html">Galeri</a>
-    <a href="info.html">Info</a>
-  </nav>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Masuk ke Akun</h2>
-  <form id="formLogin">
-    <label>Username: <input type="text" name="user" required></label><br>
-    <label>Password: <input type="password" name="pass" required></label><br>
-    <button type="submit">Masuk</button>
-  </form>
-  <p>Belum punya akun? <a href="register.html">Daftar di sini</a></p>
+  <header>
+    <h1>RPLA_61 Studio</h1>
+    <nav id="mainNav"></nav>
+  </header>
+
+  <main class="center">
+    <div class="glass-card">
+      <h2>Masuk Akun</h2>
+      <form id="formLogin">
+        <input type="text" placeholder="Username" name="user" required>
+        <input type="password" placeholder="Password" name="pass" required>
+        <button type="submit" class="btn">Masuk</button>
+      </form>
+      <p>Belum punya akun? <a href="register.html">Daftar di sini</a></p>
+    </div>
+  </main>
+
+  <footer>...</footer>
+  <script src="nav.js"></script>
   <script src="login.js"></script>
-    <script src="nav.js"></script>
 </body>
 </html>
