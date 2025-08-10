@@ -2,29 +2,25 @@
 <html lang="id">
 <head>
   <meta charset="utf-8"/>
-  <title>Daftar – RPLA_61 Studio</title>
-  <link rel="stylesheet" href="style.css"/>
-
-  <h1>RPLA_61 Studio</h1>
-  <nav>
-    <a href="index.html">Beranda</a>
-    <a href="login.html">Masuk/Daftar</a>
-    <a href="profil.html">Profil</a>
-    <a href="tugas.html">Tugas</a>
-    <a href="galeri.html">Galeri</a>
-    <a href="info.html">Info</a>
-  </nav>
-  
+  <title>Daftar – RPLA 61 Studio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>RPLA 61 Studio</h1>
+  <nav id="mainNav"></nav>
+
   <h2>Buat Akun Baru</h2>
   <form id="formReg">
     <label>Username: <input type="text" name="user" required></label><br>
     <label>Password: <input type="password" name="pass" required></label><br>
+    <label>Kode Absen: <input type="text" name="kode" placeholder="NAMA-ABSEN" required></label><br>
     <label>Foto (URL): <input type="url" name="foto" placeholder="https://i.imgur.com/xyz.png"></label><br>
     <label>Bio: <textarea name="bio" rows="3" placeholder="Tulis bio singkat..."></textarea></label><br>
     <button type="submit">Daftar</button>
   </form>
+
+  <script src="whitelist.js"></script>
   <script src="register.js"></script>
+  <script src="nav.js"></script>
 </body>
 </html>
