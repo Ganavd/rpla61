@@ -31,12 +31,18 @@ header {
 
 header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
 }
-header h1 { order: 1; }       /* logo tetap kiri */
-nav { order: 2; }             /* menu pindah kanan */
+header h1 {
+  margin-right: auto; /* logo kiri */
+}
+nav {
+  display: flex;
+  gap: .75rem;
+}
 
 nav {
   display: flex;
@@ -113,11 +119,20 @@ main {
   object-fit: cover;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  color: #fff;
-  background: rgba(0,0,0,.2);
+main.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+.glass-card {
+  background: rgba(255,255,255,.15);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.2);
+  padding: 2.5rem 3rem;
+  max-width: 420px;
+  width: 100%;
 }
 
 html, body { height: 100%; }
@@ -157,4 +172,12 @@ footer { margin-top: auto; } /* pasti di dasar */
   border-radius: 8px;
   color: #fff;
   z-index: 1000;
+}
+
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  background: rgba(0,0,0,.2);
 }
