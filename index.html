@@ -63,6 +63,7 @@ closeModal.addEventListener('click', closeModalBox);
 backdrop.addEventListener('click', e => { if (e.target === backdrop) closeModalBox(); });
 tabs.forEach(t => t.addEventListener('click', () => switchTab(t.dataset.tab)));
 </script>
+
 <body>
 <header>
   <h1>RPLA 61 Studio</h1>
@@ -76,9 +77,7 @@ tabs.forEach(t => t.addEventListener('click', () => switchTab(t.dataset.tab)));
 <p id="belumLogin" style="display:none;">Silakan <a href="login.html">login</a> 
     untuk melihat profil.</p>
   <main class="profil">
-    <button id="btnLogin" class="btn">Masuk</button>
-    <button id="btnRegister" class="btn">Daftar</button>
-  </div>
+
 
     <section class="card">
       <img src="foto-profil.jpg" alt="Foto Arga" width="150" height="150">
