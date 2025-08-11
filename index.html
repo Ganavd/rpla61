@@ -6,6 +6,76 @@
   <title>Profil – RPLA 61 Studio</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<!-- Modal backdrop -->
+<div id="modalBackdrop" class="modal-backdrop" style="display:none;">
+  <div class="modal-box">
+    <button id="closeModal" class="modal-close">×</button>
+    <!-- Tab -->
+    <div class="modal-tabs">
+      <button class="tab active" data-tab="login">Masuk</button>
+      <button class="tab" data-tab="register">Daftar</button>
+    </div>
+
+    <!-- Konten login -->
+    <form id="formLogin" class="modal-content" style="display:block;">
+      <h3>Login</h3>
+      <input type="text" placeholder="Username" name="user" required>
+      <input type="password" placeholder="Password" name="pass" required>
+      <button type="submit" class="btn">Masuk</button>
+    </form>
+
+    <!-- Konten register -->
+    <form id="formRegister" class="modal-content" style="display:none;">
+      <h3>Daftar</h3>
+      <input type="text" placeholder="Username" name="user" required>
+      <input type="password" placeholder="Password" name="pass" required>
+      <input type="text" placeholder="Kode Absen" name="kode" required>
+      <input type="url" placeholder="URL Foto" name="foto">
+      <textarea placeholder="Bio singkat" name="bio" rows="2"></textarea>
+      <button type="submit" class="btn">Daftar</button>
+    </form>
+  </div>
+</div>
+
+<script>
+const btnLogin = document.getElementById('btnLogin'); // tombol di beranda
+const btnRegister = document.getElementById('btnRegister'); // tombol di beranda
+const backdrop = document.getElementById('modalBackdrop');
+const closeModal = document.getElementById('closeModal');
+const tabs = document.querySelectorAll('.tab');
+const forms = document.querySelectorAll('.modal-content');
+
+function openModal(tab) {
+  backdrop.style.display = 'flex';
+  switchTab(tab);
+}
+function closeModalBox() {
+  backdrop.style.display = 'none';
+}
+function switchTab(tabName) {
+  tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === tabName));
+  forms.forEach(f => f.style.display = f.id === 'form' + tabName ? 'block' : 'none');
+}
+
+// event
+btnLogin?.addEventListener('click', () => openModal('login'));
+btnRegister?.addEventListener('click', () => openModal('register'));
+closeModal.addEventListener('click', closeModalBox);
+backdrop.addEventListener('click', e => { if (e.target === backdrop) closeModalBox(); });
+tabs.forEach(t => t.addEventListener('click', () => switchTab(t.dataset.tab)));
+
+// submit handler (contoh login)
+document.getElementById('formLogin').addEventListener('submit', e => {
+  e.preventDefault();
+  // logic login ...
+  closeModalBox();
+});
+document.getElementById('formRegister').addEventListener('submit', e => {
+  e.preventDefault();
+  // logic register ...
+  closeModalBox();
+});
+</script>
 <body>
   <header>
     <h1>RPLA 61 Studio</h1>
@@ -21,6 +91,11 @@
 <p id="belumLogin" style="display:none;">Silakan <a href="login.html">login</a> 
     untuk melihat profil.</p>
   <main class="profil">
+  <div style="text-align:center; margin:2rem 0;">
+    <button id="btnLogin" class="btn">Masuk</button>
+    <button id="btnRegister" class="btn">Daftar</button>
+  </div>
+
     <section class="card">
       <img src="foto-profil.jpg" alt="Foto Arga" width="150" height="150">
       <h2>Arga</h2>
