@@ -38,8 +38,8 @@
 </div>
 
 <script>
-const btnLogin = document.getElementById('btnLogin'); // tombol di beranda
-const btnRegister = document.getElementById('btnRegister'); // tombol di beranda
+const btnOpenLogin = document.getElementById('btnOpenLogin');
+const btnOpenRegister = document.getElementById('btnOpenRegister');
 const backdrop = document.getElementById('modalBackdrop');
 const closeModal = document.getElementById('closeModal');
 const tabs = document.querySelectorAll('.tab');
@@ -57,41 +57,25 @@ function switchTab(tabName) {
   forms.forEach(f => f.style.display = f.id === 'form' + tabName ? 'block' : 'none');
 }
 
-// event
-btnLogin?.addEventListener('click', () => openModal('login'));
-btnRegister?.addEventListener('click', () => openModal('register'));
+btnOpenLogin.addEventListener('click', () => openModal('login'));
+btnOpenRegister.addEventListener('click', () => openModal('register'));
 closeModal.addEventListener('click', closeModalBox);
 backdrop.addEventListener('click', e => { if (e.target === backdrop) closeModalBox(); });
 tabs.forEach(t => t.addEventListener('click', () => switchTab(t.dataset.tab)));
-
-// submit handler (contoh login)
-document.getElementById('formLogin').addEventListener('submit', e => {
-  e.preventDefault();
-  // logic login ...
-  closeModalBox();
-});
-document.getElementById('formRegister').addEventListener('submit', e => {
-  e.preventDefault();
-  // logic register ...
-  closeModalBox();
-});
 </script>
 <body>
-  <header>
-    <h1>RPLA 61 Studio</h1>
-    <nav>
-      <a href="index.html">Beranda</a>
-      <a href="login.html">Masuk / Daftar</a>
-      <a href="profil.html">Profil</a>
-      <a href="tugas.html">Tugas</a>
-      <a href="galeri.html">Galeri</a>
-      <a href="info.html">Info</a>
-    </nav>
-  </header>
+<header>
+  <h1>RPLA 61 Studio</h1>
+  <nav>
+    <a href="index.html">Beranda</a>
+    <button id="btnOpenLogin" class="btn">Masuk</button>
+    <button id="btnOpenRegister" class="btn">Daftar</button>
+    <a href="galeri.html">Galeri</a>
+  </nav>
+</header>
 <p id="belumLogin" style="display:none;">Silakan <a href="login.html">login</a> 
     untuk melihat profil.</p>
   <main class="profil">
-  <div style="text-align:center; margin:2rem 0;">
     <button id="btnLogin" class="btn">Masuk</button>
     <button id="btnRegister" class="btn">Daftar</button>
   </div>
