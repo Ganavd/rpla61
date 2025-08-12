@@ -1,7 +1,10 @@
 // whitelist.js — 36 kode absen
 const whitelist = [
-  'BAGUS-19',   // kamu
-  'LOIS-24',
+'BAGUS-19',   // kamu
+'LOISS-24',
+'IKHO-02',
+'AZIZAN-17',
+'AURINA-16'
   // ... sampai MURID-36
 ];
 
