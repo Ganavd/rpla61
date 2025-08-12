@@ -1,8 +1,7 @@
 // whitelist.js — 36 kode absen
 const whitelist = [
   'BAGUS-19',   // kamu
-  'MURID-01',   // contoh
-  'MURID-02',
+  'LOIS-24',
   // ... sampai MURID-36
 ];
 
